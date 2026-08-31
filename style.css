@@ -1,0 +1,5582 @@
+html {
+    scroll-behavior: smooth;
+}
+/* ================================
+   GLOBAL
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 15px;
+    background: #f4f7f8;
+    color: #1d2939;
+}
+
+
+/* ================================
+   SIDEBAR
+================================ */
+
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 260px;
+    height: 100vh;
+
+    background: #0b3954;
+    color: white;
+
+    padding: 28px 20px;
+
+    display: flex;
+    flex-direction: column;
+
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 0 8px 28px;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.logo-icon {
+    width: 45px;
+    height: 45px;
+
+    background: white;
+
+    border-radius: 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 23px;
+}
+
+.logo h2 {
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+.logo p {
+    font-size: 10px;
+    opacity: 0.65;
+    margin-top: 3px;
+}
+
+
+/* NAVIGATION */
+
+nav {
+    margin-top: 25px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 6px;
+}
+
+nav a {
+    color: rgba(255, 255, 255, 0.75);
+
+    text-decoration: none;
+
+    padding: 13px 14px;
+
+    border-radius: 10px;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+    background: rgba(255, 255, 255, 0.13);
+    color: white;
+    transform: translateX(3px);
+}
+
+.sidebar-bottom {
+    margin-top: auto;
+
+    padding: 15px;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    border-radius: 12px;
+
+    font-size: 11px;
+}
+
+.sidebar-bottom p {
+    opacity: 0.55;
+    margin-bottom: 5px;
+}
+
+
+/* ================================
+   MAIN CONTENT
+================================ */
+
+.main-content {
+    margin-left: 260px;
+    min-height: 100vh;
+}
+
+
+/* ================================
+   TOPBAR
+================================ */
+
+.topbar {
+    height: 90px;
+
+    background: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 55px;
+
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.small-title {
+    font-size: 10px;
+    letter-spacing: 2px;
+
+    color: #7b8794;
+}
+
+.topbar h1 {
+    font-size: 22px;
+    margin-top: 4px;
+}
+
+.group-badge {
+    background: #e8f3f7;
+
+    color: #0b3954;
+
+    padding: 10px 18px;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+
+/* ================================
+   HERO
+================================ */
+
+.hero {
+    min-height: 500px;
+
+    padding: 70px 65px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #0b3954 0%,
+            #087e8b 100%
+        );
+
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    overflow: hidden;
+}
+
+.hero-content {
+    max-width: 620px;
+}
+
+.badge {
+    display: inline-block;
+
+    padding: 8px 15px;
+
+    background: rgba(255, 255, 255, 0.14);
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    border-radius: 20px;
+
+    font-size: 12px;
+
+    margin-bottom: 20px;
+}
+
+.hero h2 {
+    font-size: clamp(38px, 5vw, 62px);
+
+    line-height: 1.05;
+
+    margin-bottom: 25px;
+}
+
+.hero h2 span {
+    display: block;
+
+    opacity: 0.7;
+}
+
+.hero p {
+    max-width: 570px;
+
+    line-height: 1.8;
+
+    color: rgba(255, 255, 255, 0.78);
+
+    font-size: 16px;
+
+    margin-bottom: 30px;
+}
+
+.hero button {
+    border: none;
+
+    padding: 14px 23px;
+
+    border-radius: 10px;
+
+    background: white;
+
+    color: #0b3954;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.hero button:hover {
+    transform: translateY(-3px);
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+}
+
+
+/* ================================
+   HERO VISUAL
+================================ */
+
+.hero-visual {
+    width: 390px;
+    height: 350px;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.circle {
+    width: 270px;
+    height: 270px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.12);
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 95px;
+
+    box-shadow:
+        0 0 0 35px rgba(255, 255, 255, 0.04),
+        0 0 0 70px rgba(255, 255, 255, 0.025);
+}
+
+.floating-card {
+    position: absolute;
+
+    padding: 13px 18px;
+
+    background: white;
+
+    color: #1d2939;
+
+    border-radius: 12px;
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.18);
+
+    font-size: 13px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+}
+
+.floating-card strong {
+    font-size: 12px;
+}
+
+.card-one {
+    top: 35px;
+    right: 10px;
+}
+
+.card-two {
+    bottom: 35px;
+    left: 5px;
+}
+
+.card-three {
+    position: absolute;
+    top: 75%;
+    right: 5%;
+    left: auto;
+    bottom: auto;
+    transform: translateY(-50%);
+}
+
+/* ================================
+   STATS
+================================ */
+
+.stats {
+    padding: 30px 55px;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 18px;
+
+    background: white;
+}
+
+.stat-card {
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    padding: 18px;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 14px;
+
+    transition: 0.3s;
+}
+
+.stat-card:hover {
+    transform: translateY(-4px);
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.07);
+}
+
+.stat-card > span {
+    font-size: 28px;
+}
+
+.stat-card strong {
+    font-size: 14px;
+}
+
+.stat-card p {
+    font-size: 11px;
+
+    color: #7b8794;
+
+    margin-top: 3px;
+}
+
+
+/* ================================
+   CONTENT SECTION
+================================ */
+
+.content-section {
+    padding: 80px 65px;
+}
+
+.content-section.alternate {
+    background: #edf4f5;
+}
+
+.section-heading {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 18px;
+
+    margin-bottom: 35px;
+}
+
+.section-heading > span {
+    font-size: 13px;
+
+    color: #087e8b;
+
+    font-weight: 700;
+
+    padding-top: 5px;
+}
+
+.section-heading p {
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    color: #7b8794;
+
+    margin-bottom: 6px;
+}
+
+.section-heading h2 {
+    font-size: 30px;
+
+    color: #0b3954;
+}
+
+
+/* ================================
+   INFO CARDS
+================================ */
+
+.info-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.info-card {
+    background: white;
+
+    padding: 28px;
+
+    border-radius: 16px;
+
+    border: 1px solid #e5e7eb;
+
+    transition: 0.3s;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.07);
+}
+
+.info-card .icon {
+    display: block;
+
+    font-size: 32px;
+
+    margin-bottom: 20px;
+}
+
+.info-card h3 {
+    font-size: 17px;
+
+    color: #0b3954;
+
+    margin-bottom: 10px;
+}
+
+.info-card p {
+    font-size: 13px;
+
+    line-height: 1.7;
+
+    color: #667085;
+}
+
+
+/* ================================
+   LARGE CARD
+================================ */
+
+.large-card {
+    background: white;
+
+    padding: 35px;
+
+    border-radius: 18px;
+
+    border: 1px solid #e5e7eb;
+}
+
+.large-card h3 {
+    color: #0b3954;
+
+    margin-bottom: 15px;
+
+    font-size: 20px;
+}
+
+.large-card > p {
+    color: #667085;
+
+    line-height: 1.8;
+
+    max-width: 850px;
+}
+
+
+/* ================================
+   HIGHLIGHTS
+================================ */
+
+.highlight-row {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 15px;
+
+    margin-top: 30px;
+}
+
+.highlight-row div {
+    padding: 20px;
+
+    background: #f4f7f8;
+
+    border-radius: 12px;
+}
+
+.highlight-row strong {
+    display: block;
+
+    color: #087e8b;
+
+    font-size: 20px;
+
+    margin-bottom: 8px;
+}
+
+.highlight-row span {
+    font-size: 13px;
+
+    color: #344054;
+}
+
+
+/* ================================
+   FEATURE CARD
+================================ */
+
+.feature-card {
+    display: flex;
+
+    gap: 30px;
+
+    align-items: center;
+
+    background: #0b3954;
+
+    color: white;
+
+    padding: 40px;
+
+    border-radius: 20px;
+}
+
+.feature-icon {
+    width: 85px;
+    height: 85px;
+
+    flex-shrink: 0;
+
+    background: rgba(255, 255, 255, 0.12);
+
+    border-radius: 18px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 42px;
+}
+
+.feature-card h3 {
+    font-size: 22px;
+
+    margin-bottom: 12px;
+}
+
+.feature-card p {
+    color: rgba(255, 255, 255, 0.7);
+
+    line-height: 1.7;
+
+    font-size: 14px;
+
+    margin-bottom: 20px;
+}
+
+.secondary-btn {
+    padding: 10px 17px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: white;
+
+    color: #0b3954;
+
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+
+/* ================================
+   NURSING LIST
+================================ */
+
+.nursing-list {
+    margin-top: 25px;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 15px;
+}
+
+.nursing-list div {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 16px;
+
+    background: #f4f7f8;
+
+    border-radius: 10px;
+}
+
+.nursing-list span {
+    width: 32px;
+    height: 32px;
+
+    background: #0b3954;
+
+    color: white;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 11px;
+}
+
+.nursing-list p {
+    font-size: 13px;
+
+    color: #475467;
+
+    line-height: 1.5;
+}
+
+
+/* ================================
+   REFLECTION
+================================ */
+
+.reflection-card {
+    background:
+        linear-gradient(
+            135deg,
+            #087e8b,
+            #0b3954
+        );
+
+    color: white;
+
+    padding: 45px;
+
+    border-radius: 20px;
+}
+
+.reflection-card h3 {
+    font-size: 23px;
+
+    margin-bottom: 15px;
+}
+
+.reflection-card p {
+    max-width: 800px;
+
+    line-height: 1.8;
+
+    color: rgba(255, 255, 255, 0.8);
+}
+
+
+/* ================================
+   REFERENCES
+================================ */
+
+.reference-card {
+    background: white;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 16px;
+
+    overflow: hidden;
+}
+
+.reference-card p {
+    padding: 18px 25px;
+
+    border-bottom: 1px solid #edf0f2;
+
+    font-size: 13px;
+
+    color: #475467;
+}
+
+.reference-card p:last-child {
+    border-bottom: none;
+}
+
+
+/* ================================
+   FOOTER
+================================ */
+
+footer {
+    padding: 35px 65px;
+
+    background: #0b3954;
+
+    color: white;
+
+    font-size: 11px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+footer p {
+    opacity: 0.6;
+}
+
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 1000px) {
+
+    .sidebar {
+        width: 220px;
+    }
+
+    .main-content {
+        margin-left: 220px;
+    }
+
+    .stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero {
+        padding: 50px 35px;
+    }
+
+    .hero-visual {
+        display: none;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .highlight-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 700px) {
+
+    .sidebar {
+        position: relative;
+
+        width: 100%;
+        height: auto;
+    }
+
+    .main-content {
+        margin-left: 0;
+    }
+
+    nav {
+        display: grid;
+
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .sidebar-bottom {
+        display: none;
+    }
+
+    .topbar {
+        padding: 20px;
+
+        height: auto;
+    }
+
+    .hero {
+        padding: 50px 25px;
+    }
+
+    .hero h2 {
+        font-size: 40px;
+    }
+
+    .stats {
+        padding: 20px;
+
+        grid-template-columns: 1fr;
+    }
+
+    .content-section {
+        padding: 55px 25px;
+    }
+
+    .feature-card {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .nursing-list {
+        grid-template-columns: 1fr;
+    }
+
+    footer {
+        padding: 25px;
+
+        flex-direction: column;
+
+        gap: 10px;
+
+        align-items: flex-start;
+    }
+}
+
+/* ================================
+   COUNTRY PROFILE
+================================ */
+
+.profile-intro {
+    display: grid;
+    grid-template-columns: 1.6fr 0.8fr;
+    gap: 25px;
+    margin-bottom: 25px;
+}
+
+.profile-text {
+    background: white;
+    padding: 35px;
+    border-radius: 18px;
+    border: 1px solid #e5e7eb;
+}
+
+.mini-badge {
+    display: inline-block;
+    padding: 6px 12px;
+    background: #e8f3f7;
+    color: #087e8b;
+    border-radius: 20px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.profile-text h3 {
+    font-size: 30px;
+    color: #0b3954;
+    margin-bottom: 15px;
+}
+
+.profile-text p {
+    color: #667085;
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 12px;
+}
+
+.profile-map {
+    min-height: 300px;
+    background: linear-gradient(145deg, #0b3954, #087e8b);
+    color: white;
+    border-radius: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.map-circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.2);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 65px;
+
+    margin-bottom: 18px;
+}
+
+.profile-map strong {
+    font-size: 20px;
+}
+
+.profile-map > span {
+    margin-top: 5px;
+    font-size: 12px;
+    opacity: 0.65;
+}
+
+
+/* COUNTRY STATISTICS */
+
+.country-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-bottom: 45px;
+}
+
+.country-stat {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 15px;
+
+    padding: 22px;
+
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    transition: 0.3s;
+}
+
+.country-stat:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.06);
+}
+
+.country-stat > span {
+    font-size: 30px;
+}
+
+.country-stat strong {
+    display: block;
+    font-size: 16px;
+    color: #0b3954;
+}
+
+.country-stat p {
+    font-size: 11px;
+    color: #7b8794;
+    margin-top: 4px;
+}
+
+
+/* HEALTHCARE SYSTEM */
+
+.health-system {
+    margin-bottom: 55px;
+}
+
+.system-title {
+    margin-bottom: 25px;
+}
+
+.system-title p {
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: #087e8b;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.system-title h3 {
+    font-size: 24px;
+    color: #0b3954;
+}
+
+.system-flow {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr auto 1fr;
+    align-items: center;
+    gap: 12px;
+}
+
+.system-card {
+    background: white;
+    border: 1px solid #e5e7eb;
+    padding: 25px;
+    border-radius: 15px;
+    min-height: 210px;
+
+    transition: 0.3s;
+}
+
+.system-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.07);
+}
+
+.system-number {
+    width: 35px;
+    height: 35px;
+
+    border-radius: 9px;
+
+    background: #0b3954;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    margin-bottom: 18px;
+}
+
+.system-card h4 {
+    color: #0b3954;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.system-card p {
+    color: #667085;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.flow-arrow {
+    font-size: 25px;
+    color: #087e8b;
+    font-weight: 700;
+}
+
+
+/* HEALTH PRIORITIES */
+
+.health-priorities {
+    margin-top: 20px;
+}
+
+.priority-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.priority-card {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    border: 1px solid #e5e7eb;
+
+    transition: 0.3s;
+}
+
+.priority-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.06);
+}
+
+.priority-card > span {
+    font-size: 30px;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.priority-card h4 {
+    color: #0b3954;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.priority-card p {
+    color: #667085;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+
+/* COUNTRY PROFILE RESPONSIVE */
+
+@media (max-width: 900px) {
+
+    .profile-intro {
+        grid-template-columns: 1fr;
+    }
+
+    .country-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .system-flow {
+        grid-template-columns: 1fr;
+    }
+
+    .flow-arrow {
+        transform: rotate(90deg);
+        text-align: center;
+    }
+
+    .priority-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* ========================================
+   TELEMEDICINE SECTION
+======================================== */
+
+.tele-intro {
+    display: grid;
+    grid-template-columns: 1.6fr 0.7fr;
+    gap: 20px;
+    margin-bottom: 50px;
+}
+
+.tele-intro-text {
+    background: white;
+    padding: 35px;
+    border-radius: 18px;
+    border: 1px solid #e5e7eb;
+}
+
+.tele-intro-text h3 {
+    font-size: 30px;
+    line-height: 1.2;
+    color: #0b3954;
+    margin-bottom: 18px;
+}
+
+.tele-intro-text p {
+    color: #667085;
+    font-size: 13px;
+    line-height: 1.8;
+    margin-bottom: 12px;
+}
+
+.tele-highlight {
+    background: linear-gradient(145deg, #0b3954, #087e8b);
+    color: white;
+    border-radius: 18px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.tele-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 18px;
+    background: rgba(255,255,255,0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+.tele-highlight strong {
+    font-size: 42px;
+    margin-bottom: 8px;
+}
+
+.tele-highlight span {
+    font-size: 12px;
+    line-height: 1.6;
+    opacity: 0.8;
+    max-width: 150px;
+}
+
+
+/* ========================================
+   TIMELINE
+======================================== */
+
+.tele-timeline {
+    margin-bottom: 55px;
+}
+
+.timeline {
+    position: relative;
+    margin-top: 30px;
+    padding-left: 35px;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 10px;
+    top: 5px;
+    bottom: 5px;
+    width: 2px;
+    background: #c9e2e7;
+}
+
+.timeline-item {
+    position: relative;
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.timeline-dot {
+    position: relative;
+    z-index: 2;
+
+    width: 75px;
+    height: 38px;
+
+    border-radius: 20px;
+
+    background: #0b3954;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.timeline-content {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 15px;
+    padding: 22px;
+    transition: 0.3s;
+}
+
+.timeline-content:hover {
+    transform: translateX(5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+}
+
+.timeline-content h4 {
+    color: #0b3954;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.timeline-content p {
+    color: #667085;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+
+/* ========================================
+   ONLINE SERVICES
+======================================== */
+
+.online-services {
+    margin-bottom: 55px;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.service-card {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 15px;
+    padding: 24px;
+
+    transition: 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.07);
+}
+
+.service-card > span {
+    display: block;
+    font-size: 30px;
+    margin-bottom: 18px;
+}
+
+.service-card h4 {
+    color: #0b3954;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.service-card p {
+    color: #667085;
+    font-size: 11px;
+    line-height: 1.7;
+}
+
+
+/* ========================================
+   LIMITATIONS
+======================================== */
+
+.tele-limitations {
+    background: #f7fafb;
+    border-radius: 20px;
+    padding: 35px;
+    margin-bottom: 55px;
+    border: 1px solid #e5e7eb;
+}
+
+.limitation-title {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.limitation-title > span {
+    font-size: 30px;
+}
+
+.limitation-title p {
+    font-size: 9px;
+    letter-spacing: 2px;
+    color: #087e8b;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.limitation-title h3 {
+    color: #0b3954;
+    font-size: 22px;
+}
+
+.limitation-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.limit-card {
+    background: white;
+    border-radius: 15px;
+    padding: 22px;
+    border: 1px solid #e5e7eb;
+}
+
+.limit-card > strong {
+    display: flex;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.not-recommended > strong {
+    background: #fce8e8;
+    color: #c0392b;
+}
+
+.recommended > strong {
+    background: #e5f6ed;
+    color: #16804a;
+}
+
+.limit-card h4 {
+    color: #0b3954;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.limit-card p {
+    color: #667085;
+    font-size: 11px;
+    line-height: 1.7;
+}
+
+
+/* ========================================
+   TELEMEDICINE IMPACT
+======================================== */
+
+.tele-impact {
+    background: linear-gradient(135deg, #0b3954, #087e8b);
+    color: white;
+    border-radius: 20px;
+    padding: 35px;
+
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 35px;
+
+    margin-bottom: 30px;
+}
+
+.tele-impact > div:first-child p {
+    font-size: 9px;
+    letter-spacing: 2px;
+    opacity: 0.7;
+    margin-bottom: 8px;
+}
+
+.tele-impact > div:first-child h3 {
+    font-size: 25px;
+    line-height: 1.3;
+}
+
+.impact-points {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.impact-points > div {
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 12px;
+    padding: 18px;
+}
+
+.impact-points strong {
+    display: block;
+    font-size: 11px;
+    opacity: 0.6;
+    margin-bottom: 7px;
+}
+
+.impact-points span {
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+
+/* ========================================
+   TELEMEDICINE RESPONSIVE
+======================================== */
+
+@media (max-width: 900px) {
+
+    .tele-intro {
+        grid-template-columns: 1fr;
+    }
+
+    .service-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .limitation-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tele-impact {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .impact-points {
+        grid-template-columns: 1fr;
+    }
+
+    .timeline-item {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+}
+/* ========================================
+   ISLAMIC HEALTHCARE
+======================================== */
+
+.islamic-intro {
+    display: grid;
+    grid-template-columns: 1.5fr 0.7fr;
+    gap: 20px;
+    margin-bottom: 50px;
+}
+
+.islamic-main {
+    background: white;
+    padding: 35px;
+    border-radius: 18px;
+    border: 1px solid #e5e7eb;
+}
+
+.islamic-main h3 {
+    font-size: 30px;
+    line-height: 1.2;
+    color: #0b3954;
+    margin-bottom: 18px;
+}
+
+.islamic-main p {
+    color: #667085;
+    font-size: 13px;
+    line-height: 1.8;
+    margin-bottom: 12px;
+}
+
+.islamic-quote {
+    background: linear-gradient(145deg, #0b3954, #087e8b);
+    color: white;
+    border-radius: 18px;
+    padding: 30px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+}
+
+.quote-symbol {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+
+    background: rgba(255,255,255,0.13);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.islamic-quote strong {
+    font-size: 14px;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.islamic-quote p {
+    font-size: 13px;
+    line-height: 1.9;
+    opacity: 0.8;
+}
+
+
+/* ========================================
+   HMI OBJECTIVES
+======================================== */
+
+.hmi-objectives {
+    margin-bottom: 55px;
+}
+
+.hmi-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.hmi-card {
+    position: relative;
+
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+
+    padding: 25px;
+
+    min-height: 240px;
+
+    transition: 0.3s;
+}
+
+.hmi-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 30px rgba(0,0,0,0.07);
+}
+
+.hmi-number {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    color: #087e8b;
+}
+
+.hmi-card > span {
+    display: block;
+    font-size: 30px;
+    margin-bottom: 18px;
+}
+
+.hmi-card h4 {
+    color: #0b3954;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.hmi-card p {
+    color: #667085;
+    font-size: 11px;
+    line-height: 1.7;
+}
+
+
+/* ========================================
+   PATIENT SERVICES
+======================================== */
+
+.patient-services {
+    margin-bottom: 55px;
+}
+
+.patient-service-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.patient-service {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 15px;
+
+    padding: 22px;
+
+    display: flex;
+    gap: 18px;
+
+    transition: 0.3s;
+}
+
+.patient-service:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.06);
+}
+
+.service-icon {
+    flex-shrink: 0;
+
+    width: 50px;
+    height: 50px;
+
+    border-radius: 13px;
+
+    background: #e8f3f7;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 25px;
+}
+
+.patient-service h4 {
+    color: #0b3954;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.patient-service p {
+    color: #667085;
+    font-size: 11px;
+    line-height: 1.7;
+}
+
+
+/* ========================================
+   STAFF ROLE
+======================================== */
+
+.islamic-staff {
+    background: #f7fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 20px;
+
+    padding: 35px;
+
+    margin-bottom: 45px;
+}
+
+.staff-heading {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    margin-bottom: 25px;
+}
+
+.staff-heading > span {
+    width: 50px;
+    height: 50px;
+
+    border-radius: 13px;
+
+    background: #0b3954;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 24px;
+}
+
+.staff-heading p {
+    font-size: 9px;
+    letter-spacing: 2px;
+    color: #087e8b;
+    font-weight: 700;
+
+    margin-bottom: 5px;
+}
+
+.staff-heading h3 {
+    color: #0b3954;
+    font-size: 22px;
+}
+
+.staff-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.staff-grid > div {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 13px;
+
+    padding: 20px;
+}
+
+.staff-grid strong {
+    display: block;
+    color: #087e8b;
+    font-size: 11px;
+    margin-bottom: 12px;
+}
+
+.staff-grid h4 {
+    color: #0b3954;
+    font-size: 14px;
+    margin-bottom: 7px;
+}
+
+.staff-grid p {
+    color: #667085;
+    font-size: 10px;
+    line-height: 1.6;
+}
+
+
+/* ========================================
+   KEY MESSAGE
+======================================== */
+
+.islamic-message {
+    background: linear-gradient(135deg, #0b3954, #087e8b);
+    color: white;
+
+    border-radius: 20px;
+
+    padding: 35px;
+
+    display: flex;
+    align-items: center;
+    gap: 25px;
+
+    margin-bottom: 30px;
+}
+
+.message-icon {
+    flex-shrink: 0;
+
+    width: 75px;
+    height: 75px;
+
+    border-radius: 20px;
+
+    background: rgba(255,255,255,0.12);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 35px;
+}
+
+.islamic-message p {
+    font-size: 9px;
+    letter-spacing: 2px;
+    opacity: 0.7;
+
+    margin-bottom: 8px;
+}
+
+.islamic-message h3 {
+    font-size: 20px;
+    line-height: 1.4;
+
+    margin-bottom: 10px;
+}
+
+.islamic-message span {
+    display: block;
+
+    font-size: 11px;
+    line-height: 1.7;
+
+    opacity: 0.75;
+}
+
+
+/* ========================================
+   ISLAMIC HEALTHCARE RESPONSIVE
+======================================== */
+
+@media (max-width: 900px) {
+
+    .islamic-intro {
+        grid-template-columns: 1fr;
+    }
+
+    .hmi-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .patient-service-list {
+        grid-template-columns: 1fr;
+    }
+
+    .staff-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .hmi-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .staff-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .islamic-message {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+/* ========================================
+   GLOBAL HEALTH
+======================================== */
+
+.global-intro {
+    display: grid;
+    grid-template-columns: 1.5fr 0.7fr;
+    gap: 20px;
+    margin-bottom: 50px;
+}
+
+.global-main {
+    background: white;
+    padding: 35px;
+    border-radius: 18px;
+    border: 1px solid #e5e7eb;
+}
+
+.global-main h3 {
+    font-size: 28px;
+    line-height: 1.25;
+    color: #0b3954;
+    margin-bottom: 18px;
+}
+
+.global-main p {
+    color: #667085;
+    font-size: 13px;
+    line-height: 1.8;
+    margin-bottom: 12px;
+}
+
+.mini-badge {
+    display: inline-block;
+    padding: 7px 12px;
+    border-radius: 20px;
+    background: #e8f3f7;
+    color: #087e8b;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    margin-bottom: 15px;
+}
+
+.global-stat {
+    background: linear-gradient(145deg, #0b3954, #087e8b);
+    color: white;
+    border-radius: 18px;
+    padding: 30px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.global-stat > span {
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.global-stat strong {
+    font-size: 42px;
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+.global-stat p {
+    font-size: 12px;
+    line-height: 1.6;
+    opacity: 0.8;
+}
+
+
+/* ========================================
+   REFORM PILLARS
+======================================== */
+
+.reform-section {
+    margin-bottom: 55px;
+}
+
+.reform-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.reform-card {
+    position: relative;
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    padding: 25px;
+    min-height: 275px;
+    transition: 0.3s;
+}
+
+.reform-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 30px rgba(0,0,0,0.07);
+}
+
+.reform-card > span {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    color: #087e8b;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.reform-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 13px;
+    background: #e8f3f7;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 24px;
+    margin-bottom: 18px;
+}
+
+.reform-card h4 {
+    color: #0b3954;
+    font-size: 14px;
+    line-height: 1.4;
+    margin-bottom: 10px;
+}
+
+.reform-card p {
+    color: #667085;
+    font-size: 10.5px;
+    line-height: 1.7;
+}
+
+
+/* ========================================
+   NCD SECTION
+======================================== */
+
+.ncd-section {
+    background: #f7fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 20px;
+
+    padding: 35px;
+
+    display: grid;
+    grid-template-columns: 0.5fr 1.5fr;
+    gap: 30px;
+    align-items: center;
+
+    margin-bottom: 55px;
+}
+
+.ncd-stat {
+    text-align: center;
+    border-right: 1px solid #d9e2e7;
+    padding-right: 30px;
+}
+
+.ncd-stat strong {
+    display: block;
+    font-size: 55px;
+    line-height: 1;
+    color: #087e8b;
+    margin-bottom: 12px;
+}
+
+.ncd-stat span {
+    color: #667085;
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+.ncd-content > p:first-child {
+    color: #087e8b;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+.ncd-content h3 {
+    color: #0b3954;
+    font-size: 23px;
+    margin-bottom: 10px;
+}
+
+.ncd-content > p {
+    color: #667085;
+    font-size: 11px;
+    line-height: 1.7;
+}
+
+.ncd-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 18px;
+}
+
+.ncd-tags span {
+    background: white;
+    border: 1px solid #e1e7ea;
+    border-radius: 20px;
+    padding: 8px 12px;
+
+    color: #0b3954;
+    font-size: 9px;
+    font-weight: 600;
+}
+
+
+/* ========================================
+   HEALTH PROGRAMS
+======================================== */
+
+.program-section {
+    margin-bottom: 55px;
+}
+
+.program-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.program-card {
+    position: relative;
+
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 15px;
+
+    padding: 25px;
+    padding-left: 70px;
+
+    min-height: 145px;
+}
+
+.program-number {
+    position: absolute;
+    left: 25px;
+    top: 27px;
+
+    width: 30px;
+    height: 30px;
+
+    border-radius: 50%;
+
+    background: #e8f3f7;
+    color: #087e8b;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 9px;
+    font-weight: 700;
+}
+
+.program-card h4 {
+    color: #0b3954;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.program-card p {
+    color: #667085;
+    font-size: 10.5px;
+    line-height: 1.7;
+}
+
+
+/* ========================================
+   GLOBAL IMPACT
+======================================== */
+
+.global-impact {
+    background: linear-gradient(145deg, #0b3954, #087e8b);
+    color: white;
+
+    border-radius: 20px;
+
+    padding: 35px;
+
+    margin-bottom: 30px;
+}
+
+.impact-heading {
+    margin-bottom: 30px;
+}
+
+.impact-heading p {
+    font-size: 9px;
+    letter-spacing: 2px;
+    opacity: 0.7;
+    margin-bottom: 8px;
+}
+
+.impact-heading h3 {
+    font-size: 25px;
+    line-height: 1.3;
+}
+
+.impact-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.global-impact-item {
+    display: flex;
+    gap: 15px;
+
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.12);
+
+    border-radius: 13px;
+
+    padding: 20px;
+}
+
+.global-impact-item > strong {
+    font-size: 16px;
+    opacity: 0.6;
+}
+
+.global-impact-item h4 {
+    font-size: 13px;
+    margin-bottom: 6px;
+}
+
+.global-impact-item p {
+    font-size: 10px;
+    line-height: 1.6;
+    opacity: 0.7;
+}
+
+
+/* ========================================
+   GLOBAL HEALTH RESPONSIVE
+======================================== */
+
+@media (max-width: 900px) {
+
+    .global-intro {
+        grid-template-columns: 1fr;
+    }
+
+    .reform-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .ncd-section {
+        grid-template-columns: 1fr;
+    }
+
+    .ncd-stat {
+        border-right: none;
+        border-bottom: 1px solid #d9e2e7;
+        padding-right: 0;
+        padding-bottom: 25px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .reform-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .program-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .impact-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ========================================
+   NURSING TECHNOLOGY
+======================================== */
+
+.nursing-intro {
+    display: grid;
+    grid-template-columns: 1.5fr 0.7fr;
+    gap: 20px;
+    margin-bottom: 50px;
+}
+
+.nursing-main {
+    background: white;
+    padding: 35px;
+    border-radius: 18px;
+    border: 1px solid #e5e7eb;
+}
+
+.nursing-main h3 {
+    font-size: 28px;
+    line-height: 1.25;
+    color: #0b3954;
+    margin-bottom: 18px;
+}
+
+.nursing-main p {
+    color: #667085;
+    font-size: 13px;
+    line-height: 1.8;
+    margin-bottom: 12px;
+}
+
+.nursing-highlight {
+    background: linear-gradient(145deg, #0b3954, #087e8b);
+    color: white;
+    border-radius: 18px;
+    padding: 30px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+}
+
+.nurse-icon {
+    width: 75px;
+    height: 75px;
+    border-radius: 20px;
+
+    background: rgba(255,255,255,0.13);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 40px;
+    margin-bottom: 18px;
+}
+
+.nursing-highlight strong {
+    font-size: 15px;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.nursing-highlight span {
+    max-width: 180px;
+    font-size: 11px;
+    line-height: 1.7;
+    opacity: 0.75;
+}
+
+
+/* ========================================
+   NURSING ROLES
+======================================== */
+
+.nursing-roles {
+    margin-bottom: 55px;
+}
+
+.nursing-role-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.nursing-role-card {
+    position: relative;
+
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+
+    padding: 25px;
+    min-height: 215px;
+
+    transition: 0.3s;
+}
+
+.nursing-role-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 30px rgba(0,0,0,0.07);
+}
+
+.role-number {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+
+    color: #087e8b;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.nursing-role-card > span {
+    display: block;
+    font-size: 30px;
+    margin-bottom: 17px;
+}
+
+.nursing-role-card h4 {
+    color: #0b3954;
+    font-size: 15px;
+    margin-bottom: 9px;
+}
+
+.nursing-role-card p {
+    color: #667085;
+    font-size: 11px;
+    line-height: 1.7;
+}
+
+
+/* ========================================
+   DIGITAL CARE FLOW
+======================================== */
+
+.digital-care {
+    margin-bottom: 55px;
+}
+
+.care-flow {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr;
+    align-items: center;
+    gap: 10px;
+}
+
+.care-step {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 15px;
+
+    padding: 22px;
+
+    text-align: center;
+    min-height: 190px;
+
+    transition: 0.3s;
+}
+
+.care-step:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.06);
+}
+
+.care-icon {
+    width: 50px;
+    height: 50px;
+
+    margin: 0 auto 12px;
+
+    border-radius: 14px;
+
+    background: #e8f3f7;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 24px;
+}
+
+.care-step > strong {
+    display: block;
+    color: #087e8b;
+    font-size: 9px;
+    margin-bottom: 8px;
+}
+
+.care-step h4 {
+    color: #0b3954;
+    font-size: 13px;
+    margin-bottom: 7px;
+}
+
+.care-step p {
+    color: #667085;
+    font-size: 10px;
+    line-height: 1.6;
+}
+
+.care-arrow {
+    color: #087e8b;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+
+/* ========================================
+   BENEFITS & CHALLENGES
+======================================== */
+
+.nursing-analysis {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+
+    margin-bottom: 45px;
+}
+
+.analysis-column {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 18px;
+    padding: 28px;
+}
+
+.analysis-heading {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+
+    margin-bottom: 20px;
+}
+
+.analysis-heading > span {
+    width: 38px;
+    height: 38px;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: 700;
+}
+
+.analysis-heading.positive > span {
+    background: #e5f6ed;
+    color: #16804a;
+}
+
+.analysis-heading.negative > span {
+    background: #fff0e9;
+    color: #c75b2c;
+}
+
+.analysis-heading p {
+    font-size: 8px;
+    letter-spacing: 2px;
+    font-weight: 700;
+
+    color: #087e8b;
+
+    margin-bottom: 4px;
+}
+
+.analysis-heading h3 {
+    color: #0b3954;
+    font-size: 20px;
+}
+
+.analysis-item {
+    display: flex;
+    gap: 15px;
+
+    padding: 14px 0;
+
+    border-top: 1px solid #edf0f2;
+}
+
+.analysis-item strong {
+    color: #087e8b;
+    font-size: 10px;
+    min-width: 20px;
+}
+
+.analysis-item p {
+    color: #667085;
+    font-size: 11px;
+    line-height: 1.6;
+}
+
+
+/* ========================================
+   NURSING KEY MESSAGE
+======================================== */
+
+.nursing-message {
+    background: linear-gradient(135deg, #0b3954, #087e8b);
+
+    color: white;
+
+    border-radius: 20px;
+
+    padding: 35px;
+
+    display: flex;
+    align-items: center;
+    gap: 25px;
+
+    margin-bottom: 30px;
+}
+
+.nursing-message .message-icon {
+    flex-shrink: 0;
+
+    width: 75px;
+    height: 75px;
+
+    border-radius: 20px;
+
+    background: rgba(255,255,255,0.12);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 35px;
+}
+
+.nursing-message p {
+    font-size: 9px;
+    letter-spacing: 2px;
+    opacity: 0.7;
+
+    margin-bottom: 8px;
+}
+
+.nursing-message h3 {
+    font-size: 20px;
+    line-height: 1.4;
+
+    margin-bottom: 10px;
+}
+
+.nursing-message span {
+    display: block;
+
+    font-size: 11px;
+    line-height: 1.7;
+
+    opacity: 0.75;
+}
+
+
+/* ========================================
+   NURSING RESPONSIVE
+======================================== */
+
+@media (max-width: 900px) {
+
+    .nursing-intro {
+        grid-template-columns: 1fr;
+    }
+
+    .nursing-role-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .care-flow {
+        grid-template-columns: 1fr;
+    }
+
+    .care-arrow {
+        transform: rotate(90deg);
+        text-align: center;
+    }
+
+    .nursing-analysis {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .nursing-role-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .nursing-message {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+/* ========================================
+   REFLECTION
+======================================== */
+
+.reflection-hero {
+    background: linear-gradient(135deg, #0b3954, #087e8b);
+    color: white;
+    border-radius: 22px;
+    padding: 40px;
+
+    display: grid;
+    grid-template-columns: 1.4fr 0.6fr;
+    gap: 30px;
+    align-items: center;
+
+    margin-bottom: 55px;
+}
+
+.reflection-title > span {
+    display: inline-block;
+
+    padding: 7px 12px;
+    border-radius: 20px;
+
+    background: rgba(255,255,255,0.12);
+
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 2px;
+
+    margin-bottom: 15px;
+}
+
+.reflection-title h3 {
+    font-size: 31px;
+    line-height: 1.2;
+    margin-bottom: 18px;
+}
+
+.reflection-title p {
+    max-width: 650px;
+
+    font-size: 12px;
+    line-height: 1.8;
+
+    opacity: 0.78;
+}
+
+.reflection-symbol {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.reflection-symbol > div {
+    min-height: 115px;
+
+    border-radius: 15px;
+
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.12);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+}
+
+.reflection-symbol strong {
+    font-size: 28px;
+    margin-bottom: 7px;
+}
+
+.reflection-symbol span {
+    font-size: 9px;
+    opacity: 0.65;
+}
+
+
+/* ========================================
+   LEARNING CARDS
+======================================== */
+
+.reflection-learning {
+    margin-bottom: 55px;
+}
+
+.learning-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.learning-card {
+    position: relative;
+
+    background: white;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+
+    padding: 25px;
+
+    min-height: 245px;
+
+    transition: 0.3s;
+}
+
+.learning-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 30px rgba(0,0,0,0.07);
+}
+
+.learning-number {
+    position: absolute;
+
+    top: 18px;
+    right: 18px;
+
+    color: #087e8b;
+
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.learning-card > span {
+    display: block;
+
+    font-size: 30px;
+
+    margin-bottom: 18px;
+}
+
+.learning-card h4 {
+    color: #0b3954;
+
+    font-size: 15px;
+    line-height: 1.4;
+
+    margin-bottom: 10px;
+}
+
+.learning-card p {
+    color: #667085;
+
+    font-size: 10.5px;
+    line-height: 1.7;
+}
+
+
+/* ========================================
+   GROUP REFLECTION BOX
+======================================== */
+
+.reflection-box {
+    background: #f7fafb;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 20px;
+
+    padding: 35px;
+
+    margin-bottom: 55px;
+}
+
+.reflection-box-heading {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    margin-bottom: 25px;
+}
+
+.reflection-box-heading > span {
+    width: 55px;
+    height: 55px;
+
+    border-radius: 15px;
+
+    background: #e8f3f7;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 27px;
+}
+
+.reflection-box-heading p {
+    color: #087e8b;
+
+    font-size: 9px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 5px;
+}
+
+.reflection-box-heading h3 {
+    color: #0b3954;
+
+    font-size: 22px;
+}
+
+.reflection-text {
+    max-width: 900px;
+}
+
+.reflection-text p {
+    color: #667085;
+
+    font-size: 12px;
+    line-height: 1.9;
+
+    margin-bottom: 15px;
+}
+
+
+/* ========================================
+   TAKEAWAYS
+======================================== */
+
+.takeaway-section {
+    margin-bottom: 50px;
+}
+
+.takeaway-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.takeaway-card {
+    background: white;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+
+    padding: 27px;
+
+    transition: 0.3s;
+}
+
+.takeaway-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.06);
+}
+
+.takeaway-card strong {
+    display: flex;
+
+    width: 35px;
+    height: 35px;
+
+    border-radius: 50%;
+
+    background: #e8f3f7;
+    color: #087e8b;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 10px;
+
+    margin-bottom: 18px;
+}
+
+.takeaway-card h4 {
+    color: #0b3954;
+
+    font-size: 16px;
+
+    margin-bottom: 9px;
+}
+
+.takeaway-card p {
+    color: #667085;
+
+    font-size: 11px;
+    line-height: 1.7;
+}
+
+
+/* ========================================
+   FINAL REFLECTION
+======================================== */
+
+.reflection-final {
+    background: linear-gradient(145deg, #0b3954, #087e8b);
+
+    color: white;
+
+    border-radius: 20px;
+
+    padding: 40px;
+
+    text-align: center;
+
+    margin-bottom: 30px;
+}
+
+.reflection-final > span {
+    display: inline-block;
+
+    font-size: 9px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    opacity: 0.65;
+
+    margin-bottom: 15px;
+}
+
+.reflection-final h3 {
+    max-width: 700px;
+
+    margin: 0 auto 15px;
+
+    font-size: 25px;
+    line-height: 1.4;
+}
+
+.reflection-final p {
+    max-width: 750px;
+
+    margin: auto;
+
+    font-size: 11px;
+    line-height: 1.8;
+
+    opacity: 0.75;
+}
+
+
+/* ========================================
+   REFLECTION RESPONSIVE
+======================================== */
+
+@media (max-width: 900px) {
+
+    .reflection-hero {
+        grid-template-columns: 1fr;
+    }
+
+    .learning-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+
+    .reflection-symbol {
+        grid-template-columns: 1fr;
+    }
+
+    .learning-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .takeaway-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .reflection-hero {
+        padding: 28px;
+    }
+
+    .reflection-title h3 {
+        font-size: 25px;
+    }
+}
+/* ========================================
+   REFERENCES
+======================================== */
+
+.references-intro {
+    display: grid;
+    grid-template-columns: 1fr 220px;
+    gap: 20px;
+
+    background: white;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 20px;
+
+    padding: 35px;
+
+    margin-bottom: 35px;
+}
+
+.references-intro h3 {
+    color: #0b3954;
+
+    font-size: 28px;
+    line-height: 1.25;
+
+    margin-bottom: 15px;
+}
+
+.references-intro p {
+    max-width: 750px;
+
+    color: #667085;
+
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.source-count {
+    background: linear-gradient(145deg, #0b3954, #087e8b);
+
+    color: white;
+
+    border-radius: 16px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+}
+
+.source-count strong {
+    font-size: 48px;
+    line-height: 1;
+
+    margin-bottom: 8px;
+}
+
+.source-count span {
+    font-size: 10px;
+
+    opacity: 0.7;
+
+    letter-spacing: 1px;
+}
+
+
+/* ========================================
+   REFERENCE LIST
+======================================== */
+
+.reference-list {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 15px;
+
+    margin-bottom: 30px;
+}
+
+.reference-item {
+    background: white;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 16px;
+
+    padding: 24px;
+
+    display: flex;
+
+    gap: 18px;
+
+    transition: 0.3s;
+}
+
+.reference-item:hover {
+    transform: translateY(-4px);
+
+    box-shadow: 0 12px 25px rgba(0,0,0,0.06);
+}
+
+.reference-number {
+    flex-shrink: 0;
+
+    width: 38px;
+    height: 38px;
+
+    border-radius: 50%;
+
+    background: #e8f3f7;
+
+    color: #087e8b;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 10px;
+
+    font-weight: 700;
+}
+
+.reference-type {
+    display: block;
+
+    color: #087e8b;
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+    margin-bottom: 7px;
+}
+
+.reference-content h4 {
+    color: #0b3954;
+
+    font-size: 14px;
+
+    margin-bottom: 7px;
+}
+
+.reference-content p {
+    color: #667085;
+
+    font-size: 10.5px;
+
+    line-height: 1.7;
+
+    margin-bottom: 12px;
+}
+
+.reference-content a {
+    color: #087e8b;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    text-decoration: none;
+}
+
+.reference-content a:hover {
+    text-decoration: underline;
+}
+
+
+/* ========================================
+   REFERENCE NOTE
+======================================== */
+
+.reference-note {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 12px;
+
+    background: #f7fafb;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 14px;
+
+    padding: 18px 20px;
+}
+
+.reference-note > span {
+    color: #087e8b;
+
+    font-size: 18px;
+}
+
+.reference-note p {
+    color: #667085;
+
+    font-size: 10px;
+
+    line-height: 1.7;
+}
+
+
+/* ========================================
+   REFERENCES RESPONSIVE
+======================================== */
+
+@media (max-width: 900px) {
+
+    .references-intro {
+        grid-template-columns: 1fr;
+    }
+
+    .source-count {
+        min-height: 140px;
+    }
+
+    .reference-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .references-intro {
+        padding: 25px;
+    }
+
+    .references-intro h3 {
+        font-size: 24px;
+    }
+
+    .reference-item {
+        padding: 20px;
+    }
+}
+
+/* ========================================
+   FINAL SECTION POLISH
+======================================== */
+
+.content-section {
+    scroll-margin-top: 30px;
+    animation: sectionFade 0.6s ease;
+}
+
+@keyframes sectionFade {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* ========================================
+   LINK INTERACTION
+======================================== */
+
+a {
+    transition: 0.25s ease;
+}
+
+
+/* ========================================
+   SECTION HEADING POLISH
+======================================== */
+
+.section-heading {
+    margin-bottom: 30px;
+}
+
+.section-heading > span {
+    color: #087e8b;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.section-heading p {
+    color: #087e8b;
+    font-size: 9px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.section-heading h2 {
+    color: #0b3954;
+}
+
+
+/* ========================================
+   GENERAL HOVER
+======================================== */
+
+button,
+a,
+.service-card,
+.hmi-card,
+.reform-card,
+.nursing-role-card,
+.learning-card,
+.takeaway-card,
+.reference-item,
+.patient-service,
+.care-step {
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+/* ========================================
+   TEXT SELECTION
+======================================== */
+
+::selection {
+    background: #087e8b;
+    color: white;
+}
+
+/* GROUP LABEL ON HOME */
+
+.group-label {
+    display: inline-block;
+    
+    margin: 12px 0 14px;
+    
+    color: #087e8b;
+    font-size: 10px;
+    font-weight: 700;
+    
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+/* ================= GROUP MEMBERS ================= */
+
+.members-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    max-width: 1000px;
+}
+
+.member-card {
+    background: white;
+    border: 1px solid #e2e8eb;
+    border-radius: 20px;
+    padding: 28px 20px;
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+.member-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.member-photo {
+    width: 75px;
+    height: 75px;
+    margin: 0 auto 18px;
+    border-radius: 50%;
+    background: #e7f3f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 35px;
+}
+
+.member-card h3 {
+    margin: 0 0 8px;
+    color: #0d3853;
+    font-size: 17px;
+}
+
+.member-card p {
+    margin: 0;
+    color: #16838b;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+@media (max-width: 800px) {
+    .members-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 550px) {
+    .members-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ================= GROUP HEADER ================= */
+
+.group-header {
+    text-align: center;
+    max-width: 850px;
+    margin: 0 auto 45px;
+    padding: 35px 30px;
+    background: white;
+    border-radius: 24px;
+    border: 1px solid #e2e8eb;
+}
+
+.group-label {
+    display: inline-block;
+    font-size: 12px;
+    letter-spacing: 3px;
+    font-weight: 700;
+    color: #16838b;
+    margin-bottom: 10px;
+}
+
+.group-header h2 {
+    margin: 5px 0 18px;
+    font-size: 36px;
+    color: #0d3853;
+}
+
+.group-header p {
+    margin: 6px 0;
+    color: #53656e;
+    font-size: 14px;
+    line-height: 1.7;
+    font-weight: 600;
+}
+
+.group-year {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #16838b;
+}
+
+/* ========================================
+   SIDEBAR - COMPACT VERSION
+======================================== */
+
+.sidebar {
+    width: 240px;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    background: #0b405c;
+    color: white;
+
+    padding: 28px 18px;
+    box-sizing: border-box;
+
+    overflow-y: auto;
+    z-index: 1000;
+}
+
+
+/* LOGO / BRAND */
+
+.sidebar-header {
+    padding: 0 10px 20px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+}
+
+.sidebar-header h1 {
+    font-size: 18px;
+    margin: 0;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.sidebar-header p {
+    font-size: 10px;
+    margin-top: 4px;
+    opacity: 0.7;
+}
+
+
+/* NAVIGATION */
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.sidebar-nav a {
+    display: flex;
+    align-items: center;
+
+    min-height: 38px;
+    padding: 8px 12px;
+
+    box-sizing: border-box;
+
+    color: #ffffff;
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 500;
+
+    border-radius: 9px;
+
+    transition: all 0.2s ease;
+}
+
+
+/* HOVER */
+
+.sidebar-nav a:hover {
+    background: rgba(255,255,255,0.10);
+    transform: translateX(3px);
+}
+
+
+/* MENU AKTIF */
+
+.sidebar-nav a.active {
+    background: rgba(255,255,255,0.16);
+    font-weight: 700;
+}
+
+
+/* PEMISAH SECTION */
+
+.sidebar-nav .menu-title {
+    margin-top: 10px;
+    margin-bottom: 3px;
+
+    padding: 5px 12px;
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    color: rgba(255,255,255,0.55);
+}
+
+
+/* BAGIAN BAWAH SIDEBAR */
+
+.sidebar-footer {
+    margin-top: 18px;
+    padding: 15px 12px;
+
+    border-radius: 12px;
+
+    background: rgba(255,255,255,0.08);
+}
+
+.sidebar-footer p {
+    margin: 0;
+
+    font-size: 10px;
+    line-height: 1.5;
+
+    color: rgba(255,255,255,0.65);
+}
+
+.sidebar-footer strong {
+    display: block;
+
+    margin-top: 3px;
+
+    color: white;
+    font-size: 12px;
+}
+
+
+/* SCROLLBAR SIDEBAR */
+
+.sidebar::-webkit-scrollbar {
+    width: 4px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background: rgba(255,255,255,0.25);
+    border-radius: 10px;
+}
+
+
+/* ========================================
+   MAIN CONTENT
+======================================== */
+
+.main-content {
+    margin-left: 240px;
+    width: calc(100% - 240px);
+}
+
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 900px) {
+
+    .sidebar {
+        width: 210px;
+    }
+
+    .main-content {
+        margin-left: 210px;
+        width: calc(100% - 210px);
+    }
+
+    .sidebar-nav a {
+        font-size: 12px;
+        padding: 7px 10px;
+    }
+}
+
+/* FONT WEBSITE */
+* {
+    font-family: "Poppins", sans-serif !important;
+}
+
+/* =================================================
+   TRANSCULTURAL NURSING
+================================================= */
+
+.transcultural-intro {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 28px;
+    margin-bottom: 45px;
+}
+
+.transcultural-main {
+    background: white;
+    padding: 35px;
+    border-radius: 24px;
+    border: 1px solid #dfe7eb;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.04);
+}
+
+.transcultural-main h3 {
+    font-size: 28px;
+    line-height: 1.25;
+    margin: 15px 0;
+}
+
+.transcultural-main p {
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+
+.transcultural-highlight {
+    background: #0d506b;
+    color: white;
+    border-radius: 24px;
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.culture-icon {
+    font-size: 55px;
+    margin-bottom: 15px;
+}
+
+.transcultural-highlight strong {
+    font-size: 18px;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+
+.transcultural-highlight span {
+    line-height: 1.6;
+    font-size: 15px;
+}
+
+
+/* ================================
+   CULTURAL FACTORS
+================================ */
+
+.cultural-factors {
+    margin-bottom: 45px;
+}
+
+.cultural-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+
+.cultural-card {
+    background: #f7fafb;
+    border: 1px solid #e2eaed;
+    border-radius: 20px;
+    padding: 25px;
+    min-height: 300px;
+    position: relative;
+    transition: 0.3s ease;
+}
+
+.cultural-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+
+.cultural-number {
+    position: absolute;
+    top: 18px;
+    right: 20px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #0c839d;
+}
+
+
+.cultural-card > span {
+    display: block;
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+
+.cultural-card h4 {
+    font-size: 19px;
+    margin-bottom: 12px;
+    color: #063f5c;
+    padding-right: 25px;
+}
+
+
+.cultural-card p {
+    font-size: 14px;
+    line-height: 1.65;
+    margin-bottom: 15px;
+}
+
+
+.cultural-card small {
+    display: inline-block;
+    font-size: 11px;
+    color: #0c839d;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+
+/* ================================
+   APPLICATION
+================================ */
+
+.transcultural-application {
+    margin-bottom: 45px;
+}
+
+
+.application-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+
+.application-card {
+    background: white;
+    border: 1px solid #dfe7eb;
+    border-radius: 20px;
+    padding: 25px;
+    transition: 0.3s ease;
+}
+
+
+.application-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.07);
+}
+
+
+.application-icon {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+
+.application-card h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #063f5c;
+}
+
+
+.application-card p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+
+/* ================================
+   KEY MESSAGE
+================================ */
+
+.transcultural-message {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    background: #0d506b;
+    color: white;
+    padding: 35px;
+    border-radius: 24px;
+    margin-bottom: 30px;
+}
+
+
+.transcultural-message .message-icon {
+    font-size: 50px;
+    min-width: 65px;
+}
+
+
+.transcultural-message p {
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+
+.transcultural-message h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+
+.transcultural-message span {
+    display: block;
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 1000px) {
+
+    .transcultural-intro {
+        grid-template-columns: 1fr;
+    }
+
+    .cultural-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .application-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .cultural-grid,
+    .application-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .transcultural-main {
+        padding: 25px;
+    }
+
+    .transcultural-message {
+        flex-direction: column;
+        text-align: center;
+    }
+
+}
+
+/* =====================================================
+   TRANSCULTURAL NURSING
+   ===================================================== */
+
+#transcultural {
+    padding-bottom: 60px;
+}
+
+
+/* ===============================
+   INTRO CARD
+   =============================== */
+
+#transcultural .intro-card {
+    background: #ffffff;
+    border: 1px solid #dfe7eb;
+    border-radius: 20px;
+    padding: 28px 32px;
+    margin-bottom: 30px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.04);
+}
+
+#transcultural .intro-card p {
+    margin: 0;
+
+    color: #28485d;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+
+/* ===============================
+   FACTOR GRID
+   =============================== */
+
+#transcultural .factor-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 22px;
+
+    margin-top: 25px;
+}
+
+
+/* ===============================
+   FACTOR CARD
+   =============================== */
+
+#transcultural .factor-card {
+    position: relative;
+
+    background: #f8fafb;
+
+    border: 1px solid #e0e8ec;
+
+    border-radius: 20px;
+
+    padding: 27px 28px;
+
+    min-height: 230px;
+
+    transition: all 0.3s ease;
+}
+
+
+/* Hover */
+
+#transcultural .factor-card:hover {
+    transform: translateY(-5px);
+
+    background: #ffffff;
+
+    border-color: #b8d7de;
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+
+/* ===============================
+   NUMBER
+   =============================== */
+
+#transcultural .factor-card > span {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 40px;
+    height: 40px;
+
+    margin-bottom: 16px;
+
+    border-radius: 50%;
+
+    background: #0d7183;
+
+    color: #ffffff;
+
+    font-size: 13px;
+
+    font-weight: 700;
+}
+
+
+/* ===============================
+   TITLE
+   =============================== */
+
+#transcultural .factor-card h3 {
+    margin: 0 0 5px;
+
+    color: #073f5b;
+
+    font-size: 20px;
+
+    line-height: 1.3;
+}
+
+
+/* ===============================
+   ENGLISH TITLE
+   =============================== */
+
+#transcultural .factor-card small {
+    display: block;
+
+    margin-bottom: 14px;
+
+    color: #0d8797;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.4px;
+}
+
+
+/* ===============================
+   CONTENT
+   =============================== */
+
+#transcultural .factor-card p {
+    margin: 0;
+
+    color: #345367;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+/* ===============================
+   SYSTEM TITLE
+   Kalau nanti kamu menambah
+   subjudul Transcultural
+   =============================== */
+
+#transcultural .system-title {
+    margin-bottom: 20px;
+}
+
+#transcultural .system-title p {
+    margin-bottom: 6px;
+
+    color: #0d8797;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.2px;
+}
+
+#transcultural .system-title h3 {
+    margin: 0;
+
+    color: #073f5b;
+
+    font-size: 24px;
+}
+
+
+/* ===============================
+   RESPONSIVE
+   =============================== */
+
+@media (max-width: 900px) {
+
+    #transcultural .factor-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    #transcultural .intro-card {
+        padding: 22px;
+    }
+
+    #transcultural .factor-card {
+        padding: 22px;
+        min-height: auto;
+    }
+
+    #transcultural .factor-card h3 {
+        font-size: 18px;
+    }
+
+    #transcultural .factor-card p {
+        font-size: 14px;
+    }
+
+}
+
+/* =====================================================
+   PERKEMBANGAN EDUKASI PERAWAT DI MALAYSIA
+   ===================================================== */
+
+.nursing-education {
+    margin-top: 55px;
+    margin-bottom: 50px;
+}
+
+
+/* ===============================
+   INTRO
+================================ */
+
+.education-intro {
+    background: #ffffff;
+
+    border: 1px solid #dfe7eb;
+
+    border-radius: 20px;
+
+    padding: 25px 30px;
+
+    margin-bottom: 40px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.04);
+}
+
+.education-intro p {
+    margin: 0;
+
+    color: #345367;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+}
+
+
+/* ===============================
+   TIMELINE
+================================ */
+
+.education-timeline {
+    position: relative;
+
+    margin-left: 20px;
+
+    padding-left: 45px;
+}
+
+
+/* garis timeline */
+
+.education-timeline::before {
+    content: "";
+
+    position: absolute;
+
+    left: 17px;
+
+    top: 10px;
+
+    bottom: 10px;
+
+    width: 2px;
+
+    background: #cbdde2;
+}
+
+
+/* ===============================
+   ITEM
+================================ */
+
+.education-item {
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns: 70px 1fr;
+
+    gap: 25px;
+
+    margin-bottom: 30px;
+}
+
+
+/* ===============================
+   NUMBER
+================================ */
+
+.education-number {
+    position: relative;
+
+    z-index: 2;
+
+    width: 36px;
+    height: 36px;
+
+    border-radius: 50%;
+
+    background: #0d7183;
+
+    color: #ffffff;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    box-shadow:
+        0 0 0 6px #f5f9fa;
+}
+
+
+/* ===============================
+   CONTENT CARD
+================================ */
+
+.education-content {
+    background: #f8fafb;
+
+    border: 1px solid #e0e8ec;
+
+    border-radius: 20px;
+
+    padding: 28px 30px;
+
+    transition: all 0.3s ease;
+}
+
+
+.education-content:hover {
+    background: #ffffff;
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.08);
+
+    border-color: #b8d7de;
+}
+
+
+/* ===============================
+   YEAR
+================================ */
+
+.education-content > span {
+    display: inline-block;
+
+    color: #0d8797;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.6px;
+
+    margin-bottom: 8px;
+}
+
+
+/* ===============================
+   TITLE
+================================ */
+
+.education-content h4 {
+    margin: 0 0 15px;
+
+    color: #073f5b;
+
+    font-size: 21px;
+
+    line-height: 1.3;
+}
+
+
+/* ===============================
+   PARAGRAPH
+================================ */
+
+.education-content p {
+    margin: 0 0 12px;
+
+    color: #345367;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+/* ===============================
+   HIGHLIGHT
+================================ */
+
+.education-highlight {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 15px;
+
+    margin-top: 18px;
+
+    padding: 15px 18px;
+
+    background: #eef7f8;
+
+    border-radius: 12px;
+
+    border-left: 4px solid #0d7183;
+}
+
+
+.education-highlight strong {
+    color: #0d7183;
+
+    font-size: 14px;
+
+    white-space: nowrap;
+}
+
+
+.education-highlight span {
+    color: #345367;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+}
+
+
+/* ===============================
+   DIGITAL LEARNING
+================================ */
+
+.education-highlight.digital {
+    background: #edf5f9;
+
+    border-left-color: #1b617c;
+}
+
+
+.education-highlight.digital strong {
+    color: #1b617c;
+}
+
+
+/* ===============================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 800px) {
+
+    .education-timeline {
+        margin-left: 0;
+
+        padding-left: 0;
+    }
+
+    .education-timeline::before {
+        display: none;
+    }
+
+    .education-item {
+        grid-template-columns: 1fr;
+
+        gap: 10px;
+    }
+
+    .education-number {
+        margin-bottom: 5px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .nursing-education {
+        margin-top: 40px;
+    }
+
+    .education-intro {
+        padding: 22px;
+    }
+
+    .education-content {
+        padding: 22px;
+    }
+
+    .education-content h4 {
+        font-size: 18px;
+    }
+
+    .education-content p {
+        font-size: 14px;
+    }
+
+    .education-highlight {
+        flex-direction: column;
+
+        gap: 5px;
+    }
+
+}
+
+/* =====================================================
+   POLICY & IMPACT SECTION
+   ===================================================== */
+
+.policy-section {
+    margin-top: 45px;
+    margin-bottom: 50px;
+}
+
+
+/* ===============================
+   POLICY GRID
+   =============================== */
+
+.policy-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 25px;
+}
+
+
+/* ===============================
+   POLICY CARD
+   =============================== */
+
+.policy-card {
+    background: #f8fafb;
+    border: 1px solid #dfe7eb;
+    border-radius: 20px;
+
+    padding: 25px;
+
+    transition: all 0.3s ease;
+}
+
+
+.policy-card:hover {
+    transform: translateY(-5px);
+
+    background: #ffffff;
+
+    border-color: #b8d7de;
+
+    box-shadow:
+        0 12px 28px rgba(0, 0, 0, 0.08);
+}
+
+
+/* Icon */
+
+.policy-card > span {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 48px;
+    height: 48px;
+
+    margin-bottom: 17px;
+
+    border-radius: 14px;
+
+    background: #eaf5f7;
+
+    font-size: 24px;
+}
+
+
+/* Title */
+
+.policy-card h4 {
+    margin: 0 0 12px;
+
+    color: #073f5b;
+
+    font-size: 17px;
+
+    line-height: 1.4;
+}
+
+
+/* Description */
+
+.policy-card p {
+    margin: 0;
+
+    color: #345367;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+/* ===============================
+   IMPACT TWO COLUMN
+   =============================== */
+
+.impact-two-col {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 22px;
+
+    margin-top: 25px;
+}
+
+
+/* ===============================
+   IMPACT BOX
+   =============================== */
+
+.impact-two-col > div {
+    padding: 25px 28px;
+
+    border-radius: 20px;
+
+    background: #ffffff;
+
+    border: 1px solid #dfe7eb;
+
+    box-shadow:
+        0 6px 20px rgba(0, 0, 0, 0.04);
+}
+
+
+/* Heading */
+
+.impact-two-col h4 {
+    margin: 0 0 18px;
+
+    color: #073f5b;
+
+    font-size: 18px;
+}
+
+
+/* List */
+
+.impact-two-col ul {
+    margin: 0;
+
+    padding-left: 20px;
+}
+
+
+.impact-two-col li {
+    margin-bottom: 10px;
+
+    color: #345367;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+
+.impact-two-col li:last-child {
+    margin-bottom: 0;
+}
+
+
+/* ===============================
+   HOVER IMPACT
+   =============================== */
+
+.impact-two-col > div:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.07);
+
+    transition: all 0.3s ease;
+}
+
+
+/* ===============================
+   RESPONSIVE
+   =============================== */
+
+@media (max-width: 900px) {
+
+    .policy-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .impact-two-col {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .policy-card {
+        padding: 22px;
+    }
+
+    .impact-two-col > div {
+        padding: 22px;
+    }
+
+    .policy-card h4 {
+        font-size: 16px;
+    }
+
+    .policy-card p,
+    .impact-two-col li {
+        font-size: 14px;
+    }
+
+}
+
+/* =====================================================
+   ADDITIONAL NURSING TECHNOLOGY
+   ===================================================== */
+
+.nursing-tech-update {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+
+/* ===============================
+   TECHNOLOGY GRID
+   =============================== */
+
+.technology-grid-new {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+
+    margin-top: 25px;
+}
+
+
+/* ===============================
+   TECHNOLOGY CARD
+   =============================== */
+
+.technology-grid-new > div {
+    background: #f8fafb;
+
+    border: 1px solid #dfe7eb;
+
+    border-radius: 20px;
+
+    padding: 25px;
+
+    transition: all 0.3s ease;
+}
+
+
+/* Hover */
+
+.technology-grid-new > div:hover {
+    transform: translateY(-5px);
+
+    background: #ffffff;
+
+    border-color: #b8d7de;
+
+    box-shadow:
+        0 12px 28px rgba(0, 0, 0, 0.08);
+}
+
+
+/* ===============================
+   ICON
+   =============================== */
+
+.technology-grid-new > div > span {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 50px;
+    height: 50px;
+
+    margin-bottom: 17px;
+
+    border-radius: 14px;
+
+    background: #eaf5f7;
+
+    font-size: 25px;
+}
+
+
+/* ===============================
+   TITLE
+   =============================== */
+
+.technology-grid-new h4 {
+    margin: 0 0 12px;
+
+    color: #073f5b;
+
+    font-size: 17px;
+
+    line-height: 1.4;
+}
+
+
+/* ===============================
+   DESCRIPTION
+   =============================== */
+
+.technology-grid-new p {
+    margin: 0;
+
+    color: #345367;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+/* =====================================================
+   NURSE ROLE
+   ===================================================== */
+
+.nurse-role-update {
+    margin-top: 25px;
+
+    padding: 28px 30px;
+
+    background: #ffffff;
+
+    border: 1px solid #dfe7eb;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 6px 20px rgba(0, 0, 0, 0.04);
+}
+
+
+/* Title */
+
+.nurse-role-update h3 {
+    margin: 0 0 18px;
+
+    color: #073f5b;
+
+    font-size: 20px;
+}
+
+
+/* List */
+
+.nurse-role-update ul {
+    margin: 0;
+
+    padding-left: 22px;
+}
+
+
+.nurse-role-update li {
+    margin-bottom: 12px;
+
+    color: #345367;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+.nurse-role-update li:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =====================================================
+   CHALLENGE STRIP
+   ===================================================== */
+
+.challenge-strip {
+    margin-top: 25px;
+
+    padding: 25px 30px;
+
+    border-radius: 20px;
+
+    background: #f8fafb;
+
+    border: 1px solid #dfe7eb;
+}
+
+
+/* Title */
+
+.challenge-strip h3 {
+    margin: 0 0 18px;
+
+    color: #073f5b;
+
+    font-size: 20px;
+}
+
+
+/* Challenge items */
+
+.challenge-strip > div {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+}
+
+
+/* Individual challenge */
+
+.challenge-strip > div > span {
+    display: inline-flex;
+
+    align-items: center;
+
+    padding: 10px 15px;
+
+    border-radius: 12px;
+
+    background: #ffffff;
+
+    border: 1px solid #dfe7eb;
+
+    color: #345367;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    transition: all 0.3s ease;
+}
+
+
+/* Hover */
+
+.challenge-strip > div > span:hover {
+    transform: translateY(-2px);
+
+    border-color: #b8d7de;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.06);
+}
+
+
+/* =====================================================
+   RESPONSIVE
+   ===================================================== */
+
+@media (max-width: 1100px) {
+
+    .technology-grid-new {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .technology-grid-new {
+        grid-template-columns: 1fr;
+    }
+
+    .nurse-role-update,
+    .challenge-strip {
+        padding: 22px;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .technology-grid-new > div {
+        padding: 22px;
+    }
+
+    .technology-grid-new h4 {
+        font-size: 16px;
+    }
+
+    .technology-grid-new p,
+    .nurse-role-update li {
+        font-size: 14px;
+    }
+
+    .challenge-strip > div {
+        flex-direction: column;
+    }
+
+    .challenge-strip > div > span {
+        width: 100%;
+
+        box-sizing: border-box;
+    }
+
+}
+
+/* =====================================================
+   TRADITIONAL MEDICINE
+   ===================================================== */
+
+#traditional {
+    padding-bottom: 60px;
+}
+
+
+/* =====================================================
+   TRADITIONAL INTRO
+   ===================================================== */
+
+.traditional-intro {
+    margin-top: 25px;
+    margin-bottom: 28px;
+
+    padding: 30px;
+
+    background: #ffffff;
+
+    border: 1px solid #dfe7eb;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.04);
+}
+
+
+/* Badge */
+
+.mini-badge {
+    display: inline-block;
+
+    margin-bottom: 14px;
+
+    padding: 7px 12px;
+
+    border-radius: 20px;
+
+    background: #eaf5f7;
+
+    color: #0d7183;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.8px;
+}
+
+
+/* Intro title */
+
+.traditional-intro h3 {
+    margin: 0 0 14px;
+
+    color: #073f5b;
+
+    font-size: 21px;
+
+    line-height: 1.4;
+}
+
+
+/* Intro paragraph */
+
+.traditional-intro p {
+    margin: 0;
+
+    color: #345367;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+}
+
+
+/* =====================================================
+   SEVEN T&CM PRACTICES
+   ===================================================== */
+
+.medicine-grid-new {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 16px;
+
+    margin-bottom: 30px;
+}
+
+
+/* Medicine card */
+
+.medicine-grid-new > div {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    min-height: 70px;
+
+    padding: 16px 18px;
+
+    background: #f8fafb;
+
+    border: 1px solid #dfe7eb;
+
+    border-radius: 16px;
+
+    color: #073f5b;
+
+    font-size: 23px;
+
+    transition: all 0.3s ease;
+}
+
+
+/* Hover */
+
+.medicine-grid-new > div:hover {
+    transform: translateY(-4px);
+
+    background: #ffffff;
+
+    border-color: #b8d7de;
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.07);
+}
+
+
+/* Medicine name */
+
+.medicine-grid-new strong {
+    color: #345367;
+
+    font-size: 13px;
+
+    line-height: 1.4;
+}
+
+
+/* =====================================================
+   TRADITIONAL COLUMNS
+   ===================================================== */
+
+.traditional-columns {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 22px;
+
+    margin-bottom: 25px;
+}
+
+
+/* Traditional card */
+
+.traditional-card {
+    padding: 28px 30px;
+
+    background: #ffffff;
+
+    border: 1px solid #dfe7eb;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 6px 20px rgba(0, 0, 0, 0.04);
+
+    transition: all 0.3s ease;
+}
+
+
+/* Hover */
+
+.traditional-card:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 12px 28px rgba(0, 0, 0, 0.07);
+}
+
+
+/* Number */
+
+.traditional-card > p:first-child {
+    display: inline-block;
+
+    margin: 0 0 10px;
+
+    color: #0d8797;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.5px;
+}
+
+
+/* Heading */
+
+.traditional-card h3 {
+    margin: 0 0 16px;
+
+    color: #073f5b;
+
+    font-size: 20px;
+
+    line-height: 1.4;
+}
+
+
+/* Paragraph */
+
+.traditional-card p:not(:first-child) {
+    margin: 0 0 13px;
+
+    color: #345367;
+
+    font-size: 14px;
+
+    line-height: 1.75;
+}
+
+
+.traditional-card p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =====================================================
+   EVIDENCE-BASED PRACTICE
+   ===================================================== */
+
+.ebp-card {
+    padding: 30px;
+
+    background: #f8fafb;
+
+    border: 1px solid #dfe7eb;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 6px 20px rgba(0, 0, 0, 0.04);
+}
+
+
+/* EBP number */
+
+.ebp-card > p:first-child {
+    margin: 0 0 8px;
+
+    color: #0d8797;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.5px;
+}
+
+
+/* EBP heading */
+
+.ebp-card h3 {
+    margin: 0 0 15px;
+
+    color: #073f5b;
+
+    font-size: 21px;
+}
+
+
+/* EBP paragraph */
+
+.ebp-card > p:not(:first-child) {
+    margin: 0;
+
+    color: #345367;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+}
+
+
+/* =====================================================
+   EBP LIST
+   ===================================================== */
+
+.ebp-list {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 12px;
+
+    margin-top: 22px;
+}
+
+
+/* EBP item */
+
+.ebp-list span {
+    display: flex;
+
+    align-items: center;
+
+    padding: 13px 16px;
+
+    background: #ffffff;
+
+    border: 1px solid #dfe7eb;
+
+    border-radius: 12px;
+
+    color: #345367;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+
+    transition: all 0.3s ease;
+}
+
+
+/* Hover */
+
+.ebp-list span:hover {
+    transform: translateY(-2px);
+
+    border-color: #b8d7de;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.06);
+}
+
+
+/* =====================================================
+   RESPONSIVE
+   ===================================================== */
+
+@media (max-width: 1000px) {
+
+    .medicine-grid-new {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 800px) {
+
+    .traditional-columns {
+        grid-template-columns: 1fr;
+    }
+
+    .ebp-list {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .traditional-intro,
+    .traditional-card,
+    .ebp-card {
+        padding: 22px;
+    }
+
+    .traditional-intro h3 {
+        font-size: 18px;
+    }
+
+    .traditional-card h3,
+    .ebp-card h3 {
+        font-size: 18px;
+    }
+
+    .medicine-grid-new {
+        grid-template-columns: 1fr;
+    }
+
+    .medicine-grid-new > div {
+        min-height: 60px;
+    }
+
+}
+
+.hero-image {
+    margin-top: 25px;
+    width: 100%;
+    max-width: 520px;
+    border-radius: 24px;
+    overflow: hidden;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    display: block;
+    border-radius: 24px;
+}
+
+/* COUNTRY PROFILE IMAGE */
+.country-image {
+    width: 100%;
+    margin: 25px 0 30px;
+    border-radius: 24px;
+    overflow: hidden;
+}
+
+.country-image img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    display: block;
+    border-radius: 24px;
+}
+
+/* TRANSCULTURAL NURSING IMAGE */
+.transcultural-image {
+    width: 100%;
+    margin: 25px 0 30px;
+    border-radius: 24px;
+    overflow: hidden;
+}
+
+.transcultural-image img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    display: block;
+    border-radius: 24px;
+}
+
+/* GLOBAL HEALTH IMAGE */
+.global-health-image {
+    width: 100%;
+    margin: 25px 0 30px;
+    border-radius: 24px;
+    overflow: hidden;
+}
+
+.global-health-image img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    display: block;
+    border-radius: 24px;
+}
+
+/* TELEMEDICINE IMAGE */
+.telemedicine-image {
+    width: 100%;
+    margin: 25px 0 30px;
+    border-radius: 24px;
+    overflow: hidden;
+}
+
+.telemedicine-image img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    display: block;
+    border-radius: 24px;
+}
+
+/* ISLAMIC HEALTHCARE IMAGE */
+.islamic-image {
+    width: 100%;
+    margin: 25px 0 30px;
+    border-radius: 24px;
+    overflow: hidden;
+}
+
+.islamic-image img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    display: block;
+    border-radius: 24px;
+}
+
+/* NURSING TECHNOLOGY IMAGE */
+.nursing-tech-image {
+    width: 100%;
+    margin: 25px 0 30px;
+    border-radius: 24px;
+    overflow: hidden;
+}
+
+.nursing-tech-image img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    display: block;
+    border-radius: 24px;
+}
+
+/* TRADITIONAL MEDICINE IMAGE */
+
+.traditional-image {
+    width: 100%;
+    height: 280px;
+    margin: 25px 0 30px;
+    border-radius: 24px;
+    overflow: hidden;
+}
+
+.traditional-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 24px;
+}
