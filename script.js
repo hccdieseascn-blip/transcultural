@@ -110,3 +110,20 @@ if (telemedicineButton) {
     });
 
 }
+
+// =========================================
+//  TRADITIONAL MEDICINE ACCORDION 
+// ========================================= 
+function toggleMedicine(button) { 
+    const item = button.parentElement; 
+    
+    //Tutup item lain 
+    document.querySelectorAll('.medicine-item').forEach(function(otherItem) { 
+
+    if (otherItem !== item) { 
+        otherItem.classList.remove('active'); 
+    } 
+}); 
+    // Buka / tutup item yang diklik 
+    item.classList.toggle('active'); 
+}
