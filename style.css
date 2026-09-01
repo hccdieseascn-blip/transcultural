@@ -5834,3 +5834,899 @@ a,
     }
 
 }
+/* =====================================================
+   INTERACTIVE UPGRADE
+===================================================== */
+
+
+/* ================================
+   SECTION ANIMATION
+================================ */
+
+.content-section,
+.hero {
+    transition:
+        opacity 0.4s ease,
+        transform 0.4s ease;
+}
+
+.section-visible {
+    animation: sectionAppear 0.5s ease;
+}
+
+@keyframes sectionAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* ================================
+   SCROLL REVEAL
+================================ */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(25px);
+    transition:
+        opacity 0.7s ease,
+        transform 0.7s ease;
+}
+
+.reveal-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* ================================
+   CARD INTERACTION
+================================ */
+
+.info-card,
+.priority-card,
+.stat-card,
+.country-stat,
+.system-card {
+    cursor: pointer;
+}
+
+.info-card:hover,
+.priority-card:hover,
+.stat-card:hover,
+.country-stat:hover,
+.system-card:hover {
+
+    transform:
+        translateY(-8px)
+        scale(1.01);
+
+}
+
+.card-selected {
+
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 15px 35px rgba(8, 126, 139, 0.18) !important;
+
+    border-color: #087e8b !important;
+
+}
+
+
+/* ================================
+   THEME BUTTON
+================================ */
+
+.theme-toggle {
+
+    position: fixed;
+
+    right: 25px;
+    bottom: 25px;
+
+    width: 48px;
+    height: 48px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: white;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,0.15);
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+    z-index: 3000;
+
+    transition: 0.3s;
+
+}
+
+.theme-toggle:hover {
+
+    transform:
+        translateY(-4px)
+        rotate(15deg);
+
+}
+
+
+/* ================================
+   BACK TO TOP
+================================ */
+
+.back-to-top {
+
+    position: fixed;
+
+    right: 25px;
+    bottom: 85px;
+
+    width: 45px;
+    height: 45px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #0b3954;
+
+    color: white;
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform: translateY(15px);
+
+    transition: 0.3s;
+
+    z-index: 2999;
+
+}
+
+.back-to-top.show {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transform: translateY(0);
+
+}
+
+.back-to-top:hover {
+
+    transform:
+        translateY(-4px);
+
+}
+
+
+/* ================================
+   MODAL
+================================ */
+
+.interactive-modal {
+
+    position: fixed;
+
+    inset: 0;
+
+    background:
+        rgba(11, 57, 84, 0.65);
+
+    backdrop-filter:
+        blur(7px);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 25px;
+
+    z-index: 5000;
+
+    opacity: 0;
+
+    transition: 0.3s;
+
+}
+
+.interactive-modal.show {
+
+    opacity: 1;
+
+}
+
+
+.modal-box {
+
+    position: relative;
+
+    width: min(620px, 100%);
+
+    max-height: 85vh;
+
+    overflow-y: auto;
+
+    background: white;
+
+    border-radius: 22px;
+
+    padding: 38px;
+
+    box-shadow:
+        0 30px 80px rgba(0,0,0,0.25);
+
+    transform: translateY(25px) scale(0.96);
+
+    transition: 0.3s;
+
+}
+
+.interactive-modal.show
+.modal-box {
+
+    transform:
+        translateY(0)
+        scale(1);
+
+}
+
+
+.modal-close {
+
+    position: absolute;
+
+    right: 20px;
+    top: 18px;
+
+    width: 35px;
+    height: 35px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #f1f5f6;
+
+    color: #0b3954;
+
+    font-size: 22px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+
+}
+
+.modal-close:hover {
+
+    transform: rotate(90deg);
+
+    background: #e5eef0;
+
+}
+
+
+.modal-icon {
+
+    width: 60px;
+    height: 60px;
+
+    border-radius: 16px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #0b3954,
+            #087e8b
+        );
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 25px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.modal-box h2 {
+
+    color: #0b3954;
+
+    font-size: 26px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.modal-content {
+
+    color: #667085;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+
+}
+
+
+.modal-content p {
+
+    margin-bottom: 15px;
+
+}
+
+
+.modal-highlight {
+
+    background: #f1f8f9;
+
+    border-left:
+        4px solid #087e8b;
+
+    padding: 18px;
+
+    border-radius: 10px;
+
+    margin: 20px 0;
+
+}
+
+
+.modal-highlight strong {
+
+    color: #0b3954;
+
+}
+
+
+.modal-highlight ul {
+
+    margin-top: 10px;
+
+    padding-left: 20px;
+
+}
+
+
+.modal-action {
+
+    margin-top: 20px;
+
+    border: none;
+
+    padding: 12px 22px;
+
+    border-radius: 10px;
+
+    background: #0b3954;
+
+    color: white;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+}
+
+
+.modal-action:hover {
+
+    background: #087e8b;
+
+    transform: translateY(-2px);
+
+}
+
+
+/* ================================
+   DARK MODE
+================================ */
+
+body.dark-mode {
+
+    background: #101c24;
+
+    color: #e7eef2;
+
+}
+
+
+body.dark-mode .topbar {
+
+    background: #162832;
+
+    border-color: #263d49;
+
+}
+
+
+body.dark-mode .topbar h1 {
+
+    color: white;
+
+}
+
+
+body.dark-mode .content-section.alternate {
+
+    background: #13242d;
+
+}
+
+
+body.dark-mode
+.info-card,
+body.dark-mode
+.stat-card,
+body.dark-mode
+.country-stat,
+body.dark-mode
+.system-card,
+body.dark-mode
+.priority-card,
+body.dark-mode
+.large-card,
+body.dark-mode
+.profile-text,
+body.dark-mode
+.tele-intro-text,
+body.dark-mode
+.timeline-content,
+body.dark-mode
+.reference-card {
+
+    background: #192d37;
+
+    border-color: #2b424d;
+
+}
+
+
+body.dark-mode
+.info-card h3,
+body.dark-mode
+.priority-card h4,
+body.dark-mode
+.system-card h4,
+body.dark-mode
+.section-heading h2,
+body.dark-mode
+.profile-text h3,
+body.dark-mode
+.tele-intro-text h3,
+body.dark-mode
+.system-title h3 {
+
+    color: #ffffff;
+
+}
+
+
+body.dark-mode
+.info-card p,
+body.dark-mode
+.priority-card p,
+body.dark-mode
+.system-card p,
+body.dark-mode
+.profile-text p,
+body.dark-mode
+.tele-intro-text p {
+
+    color: #b7c5cc;
+
+}
+
+
+body.dark-mode
+.highlight-row div,
+body.dark-mode
+.nursing-list div {
+
+    background: #203740;
+
+}
+
+
+body.dark-mode
+.highlight-row span,
+body.dark-mode
+.nursing-list p {
+
+    color: #d3dee3;
+
+}
+
+
+body.dark-mode
+.modal-box {
+
+    background: #192d37;
+
+}
+
+
+body.dark-mode
+.modal-box h2 {
+
+    color: white;
+
+}
+
+
+body.dark-mode
+.modal-content {
+
+    color: #c2d0d5;
+
+}
+
+
+body.dark-mode
+.modal-highlight {
+
+    background: #203740;
+
+}
+
+
+body.dark-mode
+.modal-highlight strong {
+
+    color: white;
+
+}
+
+
+body.dark-mode
+.theme-toggle {
+
+    background: #203740;
+
+    color: white;
+
+}
+
+
+/* ================================
+   RESPONSIVE INTERACTION
+================================ */
+
+@media (max-width: 700px) {
+
+    .theme-toggle {
+
+        right: 18px;
+        bottom: 18px;
+
+    }
+
+    .back-to-top {
+
+        right: 18px;
+        bottom: 75px;
+
+    }
+
+    .modal-box {
+
+        padding: 28px 22px;
+
+    }
+
+}
+
+/* =====================================================
+   TRANSCULTURAL NURSING - INTERACTIVE FACTORS
+===================================================== */
+
+.culture-factor {
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.culture-factor:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 15px 30px rgba(8, 126, 139, 0.15);
+}
+
+.culture-factor::after {
+    content: "Klik untuk melihat detail →";
+    position: absolute;
+    bottom: 15px;
+    left: 20px;
+    font-size: 11px;
+    color: #087e8b;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.culture-factor:hover::after {
+    opacity: 1;
+}
+
+/* Popup khusus faktor budaya */
+
+.culture-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(11, 57, 84, 0.65);
+    backdrop-filter: blur(7px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    z-index: 6000;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s ease;
+}
+
+.culture-modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.culture-modal-box {
+    width: min(650px, 100%);
+    max-height: 85vh;
+    overflow-y: auto;
+    background: white;
+    border-radius: 24px;
+    padding: 35px;
+    position: relative;
+    transform: translateY(30px) scale(.95);
+    transition: .3s ease;
+    box-shadow: 0 30px 80px rgba(0,0,0,.25);
+}
+
+.culture-modal.active .culture-modal-box {
+    transform: translateY(0) scale(1);
+}
+
+.culture-modal-box h2 {
+    color: #0b3954;
+    margin-bottom: 18px;
+}
+
+.culture-modal-box p {
+    color: #667085;
+    line-height: 1.8;
+}
+
+.culture-example {
+    background: #f1f8f9;
+    border-left: 4px solid #087e8b;
+    padding: 18px;
+    margin: 20px 0;
+    border-radius: 10px;
+}
+
+.culture-example strong {
+    color: #0b3954;
+}
+
+.culture-close {
+    position: absolute;
+    right: 20px;
+    top: 18px;
+    width: 36px;
+    height: 36px;
+    border: none;
+    border-radius: 50%;
+    background: #f1f5f6;
+    color: #0b3954;
+    font-size: 22px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.culture-close:hover {
+    transform: rotate(90deg);
+}
+
+.culture-nursing {
+    margin-top: 20px;
+    padding: 18px;
+    border-radius: 12px;
+    background: #eef7f8;
+}
+
+.culture-nursing strong {
+    color: #087e8b;
+}
+
+@media (max-width: 700px) {
+
+    .culture-modal-box {
+        padding: 28px 22px;
+    }
+
+}
+
+/* =====================================================
+   GLOBAL HEALTH - INTERACTIVE STATISTICS
+===================================================== */
+
+.stat-card {
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 15px 35px rgba(8, 126, 139, 0.18);
+}
+
+.stat-card::after {
+    content: "Klik untuk melihat insight →";
+    display: block;
+    margin-top: 10px;
+    font-size: 11px;
+    color: #087e8b;
+    opacity: 0;
+    transition: 0.3s ease;
+}
+
+.stat-card:hover::after {
+    opacity: 1;
+}
+
+
+/* ================================
+   GLOBAL HEALTH MODAL
+================================ */
+
+.health-stat-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(11, 57, 84, 0.65);
+    backdrop-filter: blur(7px);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+
+    z-index: 7000;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: 0.3s ease;
+}
+
+.health-stat-modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.health-stat-box {
+    width: min(600px, 100%);
+    max-height: 85vh;
+    overflow-y: auto;
+
+    background: white;
+
+    border-radius: 24px;
+
+    padding: 35px;
+
+    position: relative;
+
+    box-shadow:
+        0 30px 80px rgba(0,0,0,0.25);
+
+    transform:
+        translateY(30px)
+        scale(.95);
+
+    transition: .3s ease;
+}
+
+.health-stat-modal.active
+.health-stat-box {
+    transform:
+        translateY(0)
+        scale(1);
+}
+
+.health-stat-box h2 {
+    color: #0b3954;
+    margin-bottom: 15px;
+}
+
+.health-stat-box p {
+    color: #667085;
+    line-height: 1.8;
+}
+
+.health-insight {
+    margin-top: 20px;
+
+    padding: 18px;
+
+    border-left:
+        4px solid #087e8b;
+
+    border-radius: 10px;
+
+    background: #f1f8f9;
+}
+
+.health-insight strong {
+    color: #087e8b;
+}
+
+.health-source {
+    margin-top: 18px;
+
+    font-size: 12px;
+
+    color: #8a98a5;
+}
+
+.health-modal-close {
+    position: absolute;
+
+    top: 18px;
+    right: 20px;
+
+    width: 36px;
+    height: 36px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #f1f5f6;
+
+    color: #0b3954;
+
+    font-size: 22px;
+
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+.health-modal-close:hover {
+    transform: rotate(90deg);
+}
