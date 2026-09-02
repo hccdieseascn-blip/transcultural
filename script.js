@@ -405,7 +405,7 @@ function openCultureFactor(factor) {
         technology: {
             title: "💻 Technological Factors",
             description:
-                "Perkembangan teknologi kesehatan di Malaysia mencakup telemedicine, konsultasi daring, rekam medis elektronik, dan berbagai layanan kesehatan digital.",
+                "Di Malaysia, perkembangan teknologi kesehatan seperti telemedicine, konsultasi kesehatan secara daring, rekam medis elektronik, dan layanan kesehatan digital menjadi bagian dari perkembangan pelayanan kesehatan. Dalam perspektif transcultural nursing, penggunaan teknologi perlu mempertimbangkan kemampuan, penerimaan, dan kebutuhan budaya pasien. Pada masyarakat Melayu, Tionghoa, India, maupun Bumiputera Sabah dan Sarawak, tingkat literasi digital dan akses terhadap teknologi dapat berbeda. Perawat perlu memastikan pasien memahami penggunaan teknologi serta tetap menjaga privasi dan kenyamanan pasien.",
 
             example:
                 "Perawat perlu mempertimbangkan kemampuan pasien dalam menggunakan teknologi, akses internet, literasi digital, serta penerimaan pasien terhadap pelayanan kesehatan berbasis teknologi.",
@@ -417,7 +417,7 @@ function openCultureFactor(factor) {
         religion: {
             title: "☪️ Religious & Philosophical Factors",
             description:
-                "Malaysia memiliki masyarakat dengan latar belakang agama dan keyakinan yang beragam. Keyakinan agama dapat memengaruhi cara pasien memahami penyakit, pengobatan, makanan, privasi, dan praktik ibadah.",
+                "Agama memiliki pengaruh kuat terhadap perilaku kesehatan masyarakat Malaysia. Masyarakat Melayu mayoritas beragama Islam, sedangkan masyarakat Tionghoa dan India memiliki latar agama yang beragam, seperti Buddha, Tao, Hindu, Kristen, dan Islam. Dalam pelayanan keperawatan, perawat perlu memperhatikan praktik ibadah, makanan halal, puasa, privasi atau aurat, serta kebutuhan spiritual pasien. Hal ini menunjukkan pentingnya Islamic health care dalam memberikan pelayanan yang sesuai dengan nilai budaya dan agama pasien.",
 
             example:
                 "Pada pasien Muslim, kebutuhan seperti makanan halal, privasi tubuh, waktu ibadah, dan kebutuhan spiritual perlu diperhatikan selama proses perawatan.",
@@ -429,7 +429,7 @@ function openCultureFactor(factor) {
         family: {
             title: "👨‍👩‍👧 Family & Social Structure",
             description:
-                "Keluarga memiliki peran penting dalam kehidupan masyarakat Malaysia dan dapat menjadi sumber dukungan selama pasien menjalani perawatan.",
+                "Keluarga memiliki peranan penting dalam kehidupan masyarakat Malaysia dan dapat menjadi sumber dukungan selama pasien menjalani perawatan. Pada berbagai kelompok etnis, keluarga dapat terlibat dalam pengambilan keputusan kesehatan, tetapi tingkat dan bentuk keterlibatannya dapat berbeda. Perawat perlu melakukan pengkajian mengenai siapa yang dianggap penting oleh pasien dan melibatkan keluarga sesuai dengan keinginan serta persetujuan pasien.",
 
             example:
                 "Keluarga dapat dilibatkan dalam pemberian dukungan, pengingat obat, perubahan pola hidup, serta perawatan pasien di rumah.",
@@ -441,7 +441,7 @@ function openCultureFactor(factor) {
         practices: {
             title: "🌿 Cultural Health Practices",
             description:
-                "Masyarakat dapat memiliki praktik kesehatan tradisional dan komplementer yang dipengaruhi oleh budaya, keluarga, dan pengalaman sebelumnya.",
+                "Keragaman etnis Malaysia menghasilkan perbedaan dalam pola makan, kebiasaan hidup, adat istiadat, serta cara memahami kesehatan dan penyakit. Masyarakat Melayu memiliki budaya dan makanan khas Melayu, masyarakat Tionghoa memiliki pengaruh budaya dan praktik kesehatan Tionghoa, sedangkan masyarakat India memiliki pengaruh budaya India seperti praktik makanan dan pengobatan tradisional tertentu. Kelompok Bumiputera Sabah dan Sarawak juga memiliki tradisi lokal yang beragam. Perawat perlu memahami kebiasaan tersebut agar dapat memberikan asuhan yang sesuai tanpa memberikan stereotip terhadap kelompok etnis tertentu.",
 
             example:
                 "Pasien dapat menggunakan pengobatan tradisional atau komplementer bersamaan dengan pelayanan medis modern.",
@@ -453,7 +453,7 @@ function openCultureFactor(factor) {
         political: {
     title: "⚖️ Faktor Politik & Hukum",
     description:
-        "Pelayanan kesehatan di Malaysia dipengaruhi oleh kebijakan pemerintah, regulasi pelayanan kesehatan, hak pasien, serta ketentuan yang mengatur tenaga kesehatan dan penggunaan teknologi dalam pelayanan kesehatan.",
+        "Pelayanan kesehatan di Malaysia dipengaruhi oleh kebijakan pemerintah, peraturan pelayanan kesehatan, hak pasien, serta regulasi tenaga kesehatan. Perkembangan telemedicine juga membutuhkan perhatian terhadap aspek hukum, keamanan data, privasi, dan persetujuan pasien. Dalam transcultural nursing, perawat harus memberikan pelayanan secara adil kepada seluruh kelompok etnis tanpa diskriminasi serta tetap menghormati hak dan keyakinan pasien.",
 
     example:
         "Dalam penggunaan telemedicine, aspek seperti keamanan data, privasi pasien, kerahasiaan informasi kesehatan, dan persetujuan pasien perlu diperhatikan. Pelayanan juga harus diberikan secara adil kepada masyarakat dari berbagai latar belakang budaya.",
@@ -465,7 +465,7 @@ function openCultureFactor(factor) {
 economic: {
     title: "💰 Faktor Ekonomi",
     description:
-        "Kondisi ekonomi dapat memengaruhi kemampuan pasien dalam memperoleh pelayanan kesehatan, membeli obat, melakukan pemeriksaan, menggunakan transportasi, maupun mengakses teknologi kesehatan seperti telemedicine.",
+        "Kondisi ekonomi dapat memengaruhi kemampuan seseorang dalam memperoleh pelayanan kesehatan, obat-obatan, transportasi, maupun teknologi seperti telemedicine. Perbedaan akses juga dapat terlihat antara masyarakat perkotaan dengan masyarakat di wilayah terpencil, termasuk sebagian wilayah Sabah dan Sarawak. Perawat perlu mempertimbangkan kondisi ekonomi pasien ketika merencanakan intervensi agar pelayanan yang diberikan dapat dijangkau dan dilaksanakan oleh pasien.",
 
     example:
         "Pasien yang tinggal di wilayah dengan keterbatasan fasilitas atau memiliki kemampuan ekonomi yang lebih rendah dapat menghadapi hambatan dalam mengakses pelayanan kesehatan. Tantangan akses juga dapat berbeda antara wilayah perkotaan dan wilayah terpencil.",
@@ -477,7 +477,7 @@ economic: {
 education: {
     title: "🎓 Faktor Pendidikan",
     description:
-        "Tingkat pendidikan dan literasi kesehatan dapat memengaruhi kemampuan seseorang dalam memahami informasi kesehatan, mengikuti instruksi pengobatan, mengambil keputusan, dan menggunakan teknologi kesehatan.",
+        "Tingkat pendidikan dan literasi kesehatan memengaruhi kemampuan pasien dalam memahami penyakit, pengobatan, pencegahan, serta penggunaan teknologi kesehatan. Dalam masyarakat multietnis Malaysia, perawat perlu menyesuaikan metode edukasi dengan tingkat pendidikan, bahasa, dan kemampuan memahami informasi kesehatan pasien. Edukasi tidak seharusnya diberikan dengan asumsi berdasarkan etnis, tetapi berdasarkan hasil pengkajian terhadap setiap individu.",
 
     example:
         "Pasien dengan tingkat literasi kesehatan yang berbeda mungkin membutuhkan cara penyampaian informasi yang berbeda. Edukasi mengenai penggunaan obat, pola hidup sehat, maupun penggunaan telemedicine perlu disesuaikan dengan kemampuan pasien.",
